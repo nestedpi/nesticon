@@ -1188,12 +1188,4 @@
     <icon drawable="@drawable/zepp_life" package="com.xiaomi.hm.health" name="Zepp Life" />
     <icon drawable="@drawable/zepto" package="com.zeptoconsumerapp" name="Zepto" />
     <icon drawable="@drawable/zoom" package="us.zoom.videomeetings" name="Zoom" />
-    <icon drawable="@drawable/qq" package="com.tencent.mobileqq" name="QQ" />
-    <icon drawable="@drawable/mt_manager" package="bin.mt.plus" name="MT" />
-    <icon drawable="@drawable/feishu" package="com.ss.android.lark" name="Feishu" />
-    <icon drawable="@drawable/alipay" package="com.eg.android.AlipayGphone" name="Alipay" />
-    <icon drawable="@drawable/legadopro" package="io.legado.play.release" name="Legado" />
-    <icon drawable="@drawable/libchecker" package="com.absinthe.libchecker" name="Lib Checker" />
-    <icon drawable="@drawable/clash_for_android" package="com.github.kr328.clash" name="Clash" />
-    <icon drawable="@drawable/skanapp" package="com.go2get.skanapp" name="SkanApp" />
 </icons>
