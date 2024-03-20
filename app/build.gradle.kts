@@ -25,7 +25,7 @@ val ciRunNumber = providers.environmentVariable("GITHUB_RUN_NUMBER").orNull.orEm
 val isReleaseBuild = ciBuild && ciRef.contains("main")
 val devReleaseName = if (ciBuild) "(Dev #$ciRunNumber)" else "($buildCommit)"
 
-val version = "2.6.0"
+val version = "2.7.0"
 val versionDisplayName = "$version ${if (isReleaseBuild) "" else devReleaseName}"
 
 android {
@@ -36,7 +36,7 @@ android {
         applicationId = "app.lawnchair.lawnicons"
         minSdk = 26
         targetSdk = 34
-        versionCode = 9
+        versionCode = 10
         versionName = versionDisplayName
         vectorDrawables.useSupportLibrary = true
     }
@@ -84,7 +84,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.8"
+        kotlinCompilerExtensionVersion = "1.5.10"
     }
 
     packaging {
@@ -130,12 +130,12 @@ licensee {
 
 dependencies {
     val lifecycleVersion = "2.7.0"
-    val hiltVersion = "2.50"
+    val hiltVersion = "2.51"
 
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.activity:activity-compose:1.8.2")
-    implementation(platform("androidx.compose:compose-bom:2024.01.00"))
+    implementation(platform("androidx.compose:compose-bom:2024.02.02"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.ui:ui-util")
@@ -144,17 +144,18 @@ dependencies {
     implementation("androidx.compose.material:material")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material3:material3-window-size-class")
-    implementation("androidx.navigation:navigation-compose:2.7.6")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycleVersion")
-    implementation("io.github.fornewid:material-motion-compose-core:1.1.1")
+    implementation("io.github.fornewid:material-motion-compose-core:1.2.0")
     implementation("com.google.dagger:hilt-android:$hiltVersion")
     ksp("com.google.dagger:hilt-compiler:$hiltVersion")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
-    implementation("io.coil-kt:coil-compose:2.5.0")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
+    implementation("io.coil-kt:coil-compose:2.6.0")
+    val retrofitVersion = "2.10.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-kotlinx-serialization:$retrofitVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
     implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.7")
 }

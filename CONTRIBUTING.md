@@ -10,6 +10,9 @@ For additional information on designing icons and samples, see [the Lawnicons Fi
 
 Need help? [Join Lawnchair on Discord](https://discord.com/invite/3x8qNWxgGZ).
 
+### TL;DR
+The canvas is `192×192px`. The content area for most icons is `160×160px`, meaning the long side of an icon should be `160px`. Square icons should be `154×154px`. No fill, the stroke width is `12px`. All shapes should be black `#000` with rounded ends and joins. Round 90° angles by `6-32px`. Maintain visual balance. Simplify details, but don't lose recognizability. Provide original and localized names, so the icons can be found.
+
 ### Canvas & Sizes
 
 ![](docs/images/creating-icons-1-artboard.png)
@@ -19,7 +22,7 @@ The canvas size should be `192×192px` so that there is a safe zone around the i
 #### Content area for all but square
 All but square icons must fit the `160×160px` content area size. Be careful with abstract icons: the long side should be `160px`, but the other side can be smaller. Remember to adjust the size of all icons when you change the base stroke thickness (`12px`).
 #### Content area for squares
-Square icons must fit the `154×154px` content area size. Squares should be smaller than other icons to maintain visual balance. Note that icons that mostly fit in a square are considered square. See the samples in [GitHub](docs/images/creating-icons-6-sample-icons.png) or [Figma](https://www.figma.com/file/YeHvAvz2g4vqqXGqgGLqRI/%F0%9F%AA%91-Lawnicons-Guidelines?type=design&node-id=307%3A282&mode=design&t=Bf94B5qZCVr9gV0b-1).
+Square icons must fit the `154×154px` content area size. Icons that mostly fit in a square are considered square. If the icon is kinda square and kinda not, choose a size based on density: `154×154px` for dense icons, `160×160px` for the rest. Examples: [GitHub](docs/images/creating-icons-6-sample-icons.png) or [Figma](https://www.figma.com/file/YeHvAvz2g4vqqXGqgGLqRI/%F0%9F%AA%91-Lawnicons-Guidelines?type=design&node-id=307%3A282&mode=design&t=Bf94B5qZCVr9gV0b-1).
 
 ### Foundation
 
@@ -30,7 +33,7 @@ The stroke should be kept at `12px` in most cases. If an icon is too minimal or�
 #### Color and end caps
 All shapes must have non-transparent black color `#000000`, rounded caps and joins.
 #### Corner radius
-Use `6px` for 90° angles. It is allowed to leave `0px` radius in cases when `6px` clearly spoils the shape: for example, when a right angle is formed of very short lines.
+Use `6—32px` for 90° angles. It is allowed to leave `0px` radius in cases when the others spoil the shape: for example, when a right angle is formed of short lines.
 
 ### Details
 
@@ -86,7 +89,7 @@ Wrong
 Correct
 <item component="..." drawable="hulu" name="Hulu ~~ フールー" />
 ```
-If the app name has letters that aren't in English and it doesn't have an English localization, then you need to properly transliterate the name into English.
+If there are letters at the beginning of the app name that aren't in English, then it's worth adding the name transliterated into English.
 ```
 Wrong
 <item component="..." drawable="otp_szep_card" name="OTP SZÉP Card" />
@@ -156,12 +159,11 @@ Please check the [icon tool guide](/docs/icontool_guide.md) for more information
 
 ### Using 3rd-party apps
 #### IconRequest app
-[Video guide](https://kappa.lol/FL_Oh) • 11.6 MB, 25s
 
 1. Download the [IconRequest app](https://github.com/Kaiserdragon2/IconRequest/releases).
 2. Launch the app and click one of the options:
-- UPDATE EXISTING — to copy packages with activities.
-- REQUEST NEW — to save icon images and packages with activities.
+- UPDATE EXISTING — to copy packages with activities. [How to request icons](https://kappa.lol/FL_Oh), 25s video.
+- REQUEST NEW — to save icon images and packages with activities. This option is better if you are creating icons.
 3. Select the apps for which youʼd like to request or make icons.
 4. Copy, save or share.
 
